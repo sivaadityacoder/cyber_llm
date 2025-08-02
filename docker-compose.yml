@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # Backend API service
+  cyber-llm-api:
+    build: .
+    container_name: cyber-llm-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=sqlite:///./cyber_llm.db
+      - REDIS_URL=redis://redis:6379
+      - LLM_MODEL_PATH=/app/data/models
+      - VECTOR_DB_PATH=/app/data/vectorstore
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - cyber-llm-network
+
+  # Frontend Streamlit service
+  cyber-llm-frontend:
+    build: .
+    container_name: cyber-llm-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    command: >
+      streamlit run frontend/streamlit_app/app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true
+      --server.enableCORS=false
+      --server.enableXsrfProtection=false
+    depends_on:
+      - cyber-llm-api
+    restart: unless-stopped
+    networks:
+      - cyber-llm-network
+
+  # Redis cache service
+  redis:
+    image: redis:7-alpine
+    container_name: cyber-llm-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - cyber-llm-network
+
+  # Optional: Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: cyber-llm-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - cyber-llm-api
+      - cyber-llm-frontend
+    restart: unless-stopped
+    networks:
+      - cyber-llm-network
+
+volumes:
+  redis-data:
+
+networks:
+  cyber-llm-network:
+    driver: bridge
