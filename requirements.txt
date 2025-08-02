@@ -1,0 +1,46 @@
+# Core dependencies
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+requests>=2.31.0
+aiohttp>=3.8.0
+python-multipart>=0.0.6
+
+# Data processing and utilities
+numpy>=1.24.0
+pandas>=2.0.0
+python-dotenv>=1.0.0
+click>=8.1.0
+rich>=13.0.0
+typer>=0.9.0
+
+# Security and validation
+cryptography>=41.0.0
+bcrypt>=4.0.0
+passlib>=1.7.4
+
+# Logging and monitoring
+structlog>=23.0.0
+prometheus-client>=0.17.0
+
+# AI/ML libraries (optional, for advanced examples)
+transformers>=4.30.0
+torch>=2.0.0
+openai>=1.0.0
+anthropic>=0.3.0
+
+# Testing (when installed with dev extras)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-asyncio>=0.21.0
+
+# Code quality (when installed with dev extras)
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+pre-commit>=3.0.0
+isort>=5.12.0
+
+# Documentation
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
