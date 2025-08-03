@@ -5,6 +5,8 @@ streamlit==1.47.1
 
 # AI/ML Dependencies
 openai==1.98.0
+torch
+transformers
 
 # HTTP and API
 requests==2.32.4
@@ -25,8 +27,3 @@ pydantic==2.11.7
 
 # Security
 typing-extensions==4.14.1
-
-# Development Dependencies (Optional)
-pytest
-black
-flake8
