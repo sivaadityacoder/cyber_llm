@@ -1,17 +1,17 @@
-# 🛡️ Cyber LLM - Advanced Cybersecurity AI Assistant
+#  Cyber LLM - Advanced Cybersecurity AI Assistant
 
 A comprehensive cybersecurity AI platform that combines live CVE analysis, intelligent threat assessment, and LLM-powered security insights with real-time vulnerability data and advanced error handling.
 
-## 🌟 Features
+##  Features
 
-- **🔍 Live CVE Analysis**: Real-time vulnerability data from NVD API with CVSS scoring
-- **🤖 AI-Powered Security Assistant**: Intelligent responses using advanced LLM models
-- **📊 Risk Assessment**: CVSS score analysis and threat prioritization
-- **🔄 Offline Mode**: Comprehensive fallback analysis when API services are unavailable
-- **🎯 Interactive Chat Interface**: User-friendly Streamlit frontend with error handling
-- **📈 Comprehensive Training Data**: 46+ cybersecurity scenarios covering 12 security domains
-- **🛡️ Enhanced Error Recovery**: Robust error handling and graceful degradation
-- **🔒 Secure API Management**: Environment variable support and secure key handling
+- ** Live CVE Analysis**: Real-time vulnerability data from NVD API with CVSS scoring
+- ** AI-Powered Security Assistant**: Intelligent responses using advanced LLM models
+- ** Risk Assessment**: CVSS score analysis and threat prioritization
+- ** Offline Mode**: Comprehensive fallback analysis when API services are unavailable
+- ** Interactive Chat Interface**: User-friendly Streamlit frontend with error handling
+- ** Comprehensive Training Data**: 46+ cybersecurity scenarios covering 12 security domains
+- ** Enhanced Error Recovery**: Robust error handling and graceful degradation
+- ** Secure API Management**: Environment variable support and secure key handling
 
 ## Quick Start
 
@@ -66,21 +66,21 @@ streamlit run Frontend/streamlit_app_simple.py --server.port 8501 --server.addre
 ## Features
 
 ### Enhanced Features v3.0
-- ✅ **Comprehensive Cybersecurity Knowledge**: Traditional security + LLM security
-- ✅ **46 Training Examples**: Web App, Network, System, Crypto, Forensics, LLM Security
-- ✅ **LLM Attack Vectors**: Prompt injection, jailbreaking, context poisoning, DoS
-- ✅ **AI Safety Expertise**: Secure deployment, testing, validation, ethics
-- ✅ **Real-world Examples**: Based on LLM Hacking Database research
-- ✅ **Advanced UI**: Tabbed interface, analytics, confidence scoring
-- ✅ **REST API**: Comprehensive endpoints for all security domains
+-  **Comprehensive Cybersecurity Knowledge**: Traditional security + LLM security
+-  **46 Training Examples**: Web App, Network, System, Crypto, Forensics, LLM Security
+-  **LLM Attack Vectors**: Prompt injection, jailbreaking, context poisoning, DoS
+-  **AI Safety Expertise**: Secure deployment, testing, validation, ethics
+-  **Real-world Examples**: Based on LLM Hacking Database research
+-  **Advanced UI**: Tabbed interface, analytics, confidence scoring
+-  **REST API**: Comprehensive endpoints for all security domains
 
 ### Core Features
-- ✅ FastAPI backend with comprehensive security knowledge
-- ✅ Streamlit frontend with enhanced chat interface  
-- ✅ Backend status monitoring and health checks
-- ✅ Chat history management and export
-- ✅ Confidence scoring for AI responses
-- ✅ Multiple security domain coverage
+-  FastAPI backend with comprehensive security knowledge
+-  Streamlit frontend with enhanced chat interface  
+-  Backend status monitoring and health checks
+-  Chat history management and export
+-  Confidence scoring for AI responses
+-  Multiple security domain coverage
 
 ### Security Domains Covered
 1. **Web Application Security** (SQLi, XSS, CSRF, XXE, SSRF, etc.)
@@ -91,10 +91,10 @@ streamlit run Frontend/streamlit_app_simple.py --server.port 8501 --server.addre
 6. **Digital Forensics** (Evidence Collection, Analysis)
 7. **Social Engineering Defense** (Awareness, Controls)
 8. **Legal and Ethical Guidelines** (Compliance, Ethics)
-9. **🆕 LLM Security** (Prompt Injection, Jailbreaking)
-10. **🆕 AI Safety** (Secure Deployment, Testing)
-11. **🆕 Prompt Engineering Security** (Context Protection)
-12. **🆕 AI Infrastructure Security** (Access Control)
+9. ** LLM Security** (Prompt Injection, Jailbreaking)
+10. ** AI Safety** (Secure Deployment, Testing)
+11. ** Prompt Engineering Security** (Context Protection)
+12. ** AI Infrastructure Security** (Access Control)
 
 ## File Structure
 
