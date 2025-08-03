@@ -1,0 +1,32 @@
+# Core Dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+streamlit==1.47.1
+
+# AI/ML Dependencies
+openai==1.98.0
+
+# HTTP and API
+requests==2.32.4
+httpx==0.28.1
+
+# Data Processing
+pandas==2.3.1
+numpy==2.3.2
+
+# Database and Storage
+chromadb
+
+# Additional Utilities
+python-dotenv==1.0.0
+python-multipart==0.0.6
+jinja2==3.1.6
+pydantic==2.11.7
+
+# Security
+typing-extensions==4.14.1
+
+# Development Dependencies (Optional)
+pytest
+black
+flake8

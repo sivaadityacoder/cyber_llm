@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile.trendyol
+    command: python -m uvicorn main_cve_enhanced:app --host 0.0.0.0 --port 8000 --workers 4 --log-level info
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend:/app
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./chroma_db:/app/chroma_db
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile.trendyol
+    command: streamlit run streamlit_app_cve_enhanced.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Frontend:/app
+    depends_on:
+      - backend
+
+networks:
+  default:
+    driver: bridge

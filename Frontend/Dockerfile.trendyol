@@ -1,0 +1,60 @@
+# Trendyol-Enhanced Frontend v4.0
+FROM python:3.11-slim
+
+# Professional metadata
+LABEL maintainer="Trendyol Cybersecurity Team"
+LABEL version="4.0.0"
+LABEL description="Professional cybersecurity AI frontend with enterprise features"
+LABEL security.level="enterprise"
+LABEL ui.framework="streamlit"
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    STREAMLIT_SERVER_PORT=8501 \
+    STREAMLIT_SERVER_ADDRESS=0.0.0.0 \
+    STREAMLIT_BROWSER_GATHER_USAGE_STATS=false \
+    STREAMLIT_THEME_BASE=light
+
+# Create application directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Create non-root user for security
+RUN groupadd -r streamlit && useradd -r -g streamlit -d /app -s /sbin/nologin streamlit
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir \
+        plotly \
+        altair \
+        pillow
+
+# Copy application code
+COPY . .
+
+# Create necessary directories
+RUN mkdir -p /app/cache /app/uploads
+
+# Set proper permissions
+RUN chown -R streamlit:streamlit /app
+
+# Switch to non-root user
+USER streamlit
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
+
+# Expose port
+EXPOSE 8501
+
+# Professional startup command
+CMD ["streamlit", "run", "streamlit_app_trendyol.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.maxUploadSize", "10"]

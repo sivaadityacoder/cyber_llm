@@ -1,0 +1,14 @@
+[
+  {
+    "instruction": "What are the legal and ethical boundaries in ethical hacking?",
+    "response": "Legal and ethical boundaries: 1) Always obtain written authorization before testing, 2) Stay within defined scope and timeframes, 3) Respect data privacy and confidentiality, 4) Follow responsible disclosure practices, 5) Comply with local and international laws, 6) Avoid causing damage or disruption, 7) Document all activities properly, 8) Consider third-party impacts, 9) Maintain professional integrity, 10) Report findings responsibly to appropriate parties."
+  },
+  {
+    "instruction": "What is responsible disclosure in cybersecurity?",
+    "response": "Responsible disclosure is the practice of reporting security vulnerabilities to vendors or organizations in a coordinated manner. Process: 1) Discover vulnerability through authorized testing, 2) Document the issue thoroughly, 3) Contact the vendor/organization privately, 4) Provide reasonable time for fixes (30-90 days), 5) Work collaboratively on remediation, 6) Coordinate public disclosure timing, 7) Credit researchers appropriately, 8) Follow established disclosure policies, 9) Consider public safety and user protection."
+  },
+  {
+    "instruction": "What are essential tools for ethical hacking and their proper usage?",
+    "response": "Essential ethical hacking tools: 1) Network scanning: Nmap, Masscan, 2) Vulnerability assessment: Nessus, OpenVAS, 3) Web application testing: Burp Suite, OWASP ZAP, 4) Penetration testing: Metasploit, Cobalt Strike, 5) Wireless testing: Aircrack-ng, Kismet, 6) Social engineering: SET, Gophish, 7) Forensics: Autopsy, Volatility, 8) Always use tools ethically, with proper authorization, and within legal boundaries. Keep tools updated and understand their impact."
+  }
+]

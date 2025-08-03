@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+torch
+transformers
+bitsandbytes
+peft
+chromadb
+langchain
+sentence-transformers
+SpeechRecognition
+gTTS
+pyaudio
