@@ -100,3 +100,5 @@ node_modules/
 # Large embedded repositories
 Trendyol-Cybersecurity-LLM-Qwen3-32B-Q8_0-GGUF/
 llm-hacking-database/
+venv/
+.venv/

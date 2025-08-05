@@ -1,7 +1,0 @@
-{
-  "training_start": "2025-08-02T04:17:55.541913",
-  "status": "completed",
-  "final_loss": "1.2184",
-  "total_training_time": "simulated",
-  "model_size": "1.1B parameters + LoRA adapters"
-}

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Startup script for OwnLLM project
+# Startup script for Cyber LLM project
 # This script starts both backend and frontend services
 
-echo "🚀 Starting OwnLLM Project..."
+echo "🚀 Starting Cyber LLM Project..."
 
 # Change to project directory
-cd /home/coder/startup/ownllm
+cd /home/siva/project/cyber_llm
 
 # Kill any existing processes
 echo "🔄 Stopping any existing services..."
