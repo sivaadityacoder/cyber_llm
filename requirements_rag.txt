@@ -1,0 +1,6 @@
+sentence-transformers
+faiss-cpu
+aiohttp
+beautifulsoup4
+numpy
+requests
